@@ -20,6 +20,22 @@ echo($num/$x);
 
 // Q3 日付操作
 
+<?php
+// $currentTimestamp = time();
+// echo date("Y年m月d日 H時i分s秒", $currentTimestamp);
+
+// echo "現在は" . date("Y年m月d日 H時i分s秒", $currentTimestamp) . "です。\n";
+
+🟡echo "現在は" . date("Y年m月d日 H時i分s秒") . "です。"
+// ▶️ 第二引数を省略(渡していない)した形
+
+// function cccc() {
+//     // 
+// }
+
+// cccc();
+?>
+
 
 // Q4 条件分岐-1 if文
 
