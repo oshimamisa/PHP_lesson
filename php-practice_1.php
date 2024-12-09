@@ -10,6 +10,13 @@ echo $newMessage;
 
 // Q2 四則演算
 
+<?php
+$num = 5*4;
+$x = 2;
+
+echo "$num \n";
+echo($num/$x);
+?>
 
 // Q3 日付操作
 
