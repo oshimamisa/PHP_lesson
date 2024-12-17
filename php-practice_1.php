@@ -39,6 +39,22 @@ echo($num/$x);
 
 // Q4 条件分岐-1 if文
 
+<?php
+$device = 'Apple';//①$deviceに任意の文字列を格納
+if ($device == 'windows') { //②$deviceの値が「windows」だったら、「使用OSは、windowsです。」と表示。
+    echo '使用OSはwindowsです。';
+}elseif ($device == 'mac') { //③$deviceの値が「mac」だったら、「使用OSは、macです。」と表示。
+    echo '使用OSはmacです。';
+}else{//④$deviceの値が上記2つ以外だったら、「どちらでもありません。」と表示。
+    echo'どちらでもありません';
+}
+
+?>
+
+✅；の入力忘れ注意
+✅ ==と===の違いについて理解する
+
+
 
 // Q5 条件分岐-2 三項演算子
 
