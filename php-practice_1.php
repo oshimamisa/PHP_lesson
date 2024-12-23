@@ -158,6 +158,20 @@ foreach ($array as $key => $value) {//定義$arrayを$key => $valueとしてい�
 
 // Q10 関数-1
 
+<?php
+
+function sayHi($name)
+
+{
+    echo $name . 'さん、こんにちは。' . "\n";
+}
+
+sayHi('金谷');
+sayHi('安藤');
+
+?>
+
+
 
 // Q11 関数-2
 
