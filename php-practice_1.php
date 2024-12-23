@@ -175,6 +175,22 @@ sayHi('安藤');
 
 // Q11 関数-2
 
+<?php //定義と呼び出しがあることを意識する
+
+function calcTaxInPrice($price)//税抜き価格を引数に受け取って税込価格に変換して返す関数を、calcTaxInPrice という名前で定義してください。
+
+{
+    return ($price * 1.1); //消費税は 10% として計算してください。
+}
+$price = 1000; //1000円の税込金額を出す
+$taxInPrice = calcTaxInPrice($price);//ここが両辺で同じ意味になることを理解する
+
+echo $price . '円の商品の税込価格は' . $taxInPrice . '円です。';//echoで呼び出し
+
+?>
+
+✅引数と返り値
+
 
 // Q12 関数とif文
 
