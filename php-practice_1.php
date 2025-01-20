@@ -249,7 +249,7 @@ switch ($grade){
         echo '合格です。';
         break;
         
-    case 'c';
+    case 'C';
         echo '合格ですが追加課題があります。';
         break;
         
