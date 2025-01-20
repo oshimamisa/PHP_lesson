@@ -194,6 +194,47 @@ echo $price . '円の商品の税込価格は' . $taxInPrice . '円です。';//
 
 // Q12 関数とif文
 
+<?php
+
+function distinguishNum($number)
+
+{
+    return($number % 2 == 0); //関数をBで割った
+}
+
+
+if($number % 2 == 0){
+    echo $number . 'は偶数です。';
+}else{
+    echo $number . 'は奇数です。';
+}
+
+$number = 11;
+$number = 24;//✅質問✅異なるスコープの変数を呼び出している？
+?>
+
+🟠回答🟠
+<?php
+
+function distinguishNum($number)
+
+
+{
+    if($number % 2 == 0){ //$numberが2で割って0の時
+    return $number . 'は偶数です。';
+}else{
+    return $number . 'は奇数です。';
+
+}
+
+}
+
+echo distinguishNum('11');
+echo distinguishNum('24');//✅質問✅異なるスコープの変数を呼び出している？
+
+?>
+
+
 
 // Q13 関数とswitch文
 
