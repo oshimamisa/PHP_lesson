@@ -238,5 +238,35 @@ echo distinguishNum('24');//✅質問✅異なるスコープの変数を呼び�
 
 // Q13 関数とswitch文
 
+<?php
+function evaluateGrade($grade)
+
+{
+switch ($grade){
+
+    case 'A';
+    case 'B';
+        echo '合格です。';
+        break;
+        
+    case 'c';
+        echo '合格ですが追加課題があります。';
+        break;
+        
+    case 'D';
+        echo '不合格です。';
+        break;
+        
+    default;
+        echo '判定不明です。講師に問い合わせてください。';
+        break;
+
+}
+}
+
+echo evaluateGrade('A');
+echo evaluateGrade('X');
+?>
+
 
 ?>
