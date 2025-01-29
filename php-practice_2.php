@@ -132,6 +132,8 @@ var_dump($personalInfos);
 
 <?php
 
+<?php
+
 class Student
 {
     public $studentId;
@@ -147,8 +149,15 @@ class Student
     {
         echo '授業に出席しました。';
     }
+    
 }
 
+    $mio = new Student('1523', '実央');
+    $yamada = new Student('120', '山田');
+    
+    echo $yamada = '学籍番号' . $yamada->studentId . '番の生徒は' . $yamada->studentName . 'です。';
+
+?>
 
 // Q4 オブジェクト-2
 
