@@ -189,4 +189,11 @@ $yamada->attend('PHP');
 
 
 // Q5 定義済みクラス
+
+<?php
+
+$date = new DateTime('2021-02-02');
+
+echo $date -> format('Y-m-d');
+
 ?>
