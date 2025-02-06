@@ -190,10 +190,21 @@ $yamada->attend('PHP');
 
 // Q5 定義済みクラス
 
+🟠問１
 <?php
 
 $date = new DateTime('2021-02-02');
 
 echo $date -> format('Y-m-d');
 
+?>
+
+🟠問２
+<?php
+
+$datetime1 = new DateTime('1992-04-25');
+$datetime2 = new DateTime('2025-02-06');
+$interval = $datetime1 -> diff($datetime2);
+
+echo $interval -> format('あの日から' . '%a' .  '日経過しました。');
 ?>
