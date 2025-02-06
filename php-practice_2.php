@@ -191,9 +191,11 @@ $yamada->attend('PHP');
 // Q5 定義済みクラス
 
 🟠問１
+
 <?php
 
-$date = new DateTime('2021-02-02');
+$date = new DateTime();//現在自国を持つdatetimeインスタンスの作成
+$date->modify('-1month');
 
 echo $date -> format('Y-m-d');
 
