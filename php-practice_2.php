@@ -190,23 +190,23 @@ $yamada->attend('PHP');
 
 // Q5 定義済みクラス
 
-🟠問１
+// 🟠問１
 
 <?php
 
 $date = new DateTime();//現在自国を持つdatetimeインスタンスの作成
 $date->modify('-1month');
 
-echo $date -> format('Y-m-d');
+echo $date->format('Y-m-d');
 
 ?>
 
-🟠問２
+// 🟠問２
 <?php
 
 $datetime1 = new DateTime('1992-04-25');
-$datetime2 = new DateTime('2025-02-06');
-$interval = $datetime1 -> diff($datetime2);
+$datetime2 = new DateTime();
+$interval = $datetime1->diff($datetime2);
 
-echo $interval -> format('あの日から' . '%a' .  '日経過しました。');
+echo $interval->format('あの日から' . '%a' . '日経過しました。');
 ?>
