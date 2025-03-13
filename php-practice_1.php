@@ -31,7 +31,7 @@ echo $num / $x;
 
 // echo "現在は" . date("Y年m月d日 H時i分s秒", $currentTimestamp) . "です。\n";
 
-🟡echo "現在は" . date("Y年m月d日 H時i分s秒") . "です。"
+🟡echo "現在時刻は" . date("Y年m月d日 H時i分s秒") . "です。"
 // ▶️ 第二引数を省略(渡していない)した形
 
 // function cccc() {
@@ -44,9 +44,9 @@ echo $num / $x;
 
 // Q4 条件分岐-1 if文
 
-<?php
+/* <?php
 $device = 'Apple';//①$deviceに任意の文字列を格納
-if ($device == 'windows') { //②$deviceの値が「windows」だったら、「使用OSは、windowsです。」と表示。
+if ($device == 'windows' || $device == 'mac') { //②$deviceの値が「windows」だったら、「使用OSは、windowsです。」と表示。
     echo '使用OSはwindowsです。';
 }elseif ($device == 'mac') { //③$deviceの値が「mac」だったら、「使用OSは、macです。」と表示。
     echo '使用OSはmacです。';
@@ -55,13 +55,26 @@ if ($device == 'windows') { //②$deviceの値が「windows」だったら、「
 }
 
 ?>
-
+ */
 ✅；の入力忘れ注意
 ✅ ==と===の違いについて理解する
 
-// Q5 条件分岐-2 三項演算子
+🔴修正 解答
 
 <?php
+$device = 'Apple';//①$deviceに任意の文字列を格納
+if ($device == 'windows' || $device == 'mac') { //②$deviceの値が「windows」だったら、「使用OSは、windowsです。」と表示。
+    echo '使用OSは' . $device . 'です。';
+}else{//④$deviceの値が上記2つ以外だったら、「どちらでもありません。」と表示。
+    echo'どちらでもありません';
+}
+
+?>
+
+
+// Q5 条件分岐-2 三項演算子
+
+/* <?php
 $age = 23;
 if($age <= 18){
     echo'未成年です。';
@@ -69,13 +82,23 @@ if($age <= 18){
     echo'成人です。';
 }
 ?>
+ */
+
+🔴修正 解答
+
+<?php
+$age = 23;
+$message = $age <= 18 ? '未成年です' : '成人です';
+
+echo $message;
+?>
 
 // Q6 配列
 
 <?php
 $ken = ['栃木県', '千葉県', '静岡県', '東京都' , '埼玉県'];
     var_dump($ken);
-    echo $ken[3] . 'と' . $ken[4] . 'は関東地方の都道府県です。';
+    echo $ken[2] . 'と' . $ken[3] . 'は関東地方の都道府県です。';
 ?>
 ✅シングルクォーテーションが飛び越えることはない
 ✅作りたい文章を一度書いてみて、どこに変数を置きたくて、どこで分割されるのかをみてみると分かりやすい
@@ -98,7 +121,7 @@ foreach ($array as $key => $value) {//$key => $valueを定義してるas
 }
 ?>
 
-✅'と"の使い分けができるようにする
+// ✅'と"の使い分けができるようにする
 ✅改行\nを覚える
 ✅(まるかっこ)と{なみかっこ}
 
@@ -168,11 +191,26 @@ foreach ($array as $key => $value) {//定義$arrayを$key => $valueとしてい�
 function sayHi($name)
 
 {
-    echo $name . 'さん、こんにちは。' . "\n";
+    return $name . 'さん、こんにちは。' . "\n";
 }
 
 sayHi('金谷');
 sayHi('安藤');
+
+?>
+
+🔴修正 解答
+
+<?php
+
+function sayHi($name = '高橋')
+
+{
+    return $name . 'さん、こんにちは。' . "\n";
+}
+
+echo sayHi('金谷');
+echo sayHi('安藤');
 
 ?>
 
@@ -222,16 +260,12 @@ $number = 24;//✅質問✅異なるスコープの変数を呼び出してい�
 <?php
 
 function distinguishNum($number)
-
-
 {
     if($number % 2 == 0){ //$numberが2で割って0の時
-    return $number . 'は偶数です。';
-}else{
-    return $number . 'は奇数です。';
-
-}
-
+        return $number . 'は偶数です。';
+    }else{
+        return $number . 'は奇数です。';
+    }
 }
 
 echo distinguishNum('11');

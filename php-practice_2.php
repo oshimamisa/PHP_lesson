@@ -1,29 +1,29 @@
 <?php
 // Q1 tic-tac問題
 
-<?php
-function tohundred($count)
 
-{
-if($count%4 == 0 && $count%5 == 0){
-    return 'tic-tac';
-}else{
-    return $count;
-}
 
-if($count%4 == 0){
-    return 'tic';
-}
+<?php 
+for($i=0; $i<101; $i++){//カウンタの初期値は0、$iが101より小さい場合はずっと繰り返す、増減式処理1回ごとに1を加算していく
+
+    if($i%4 == 0 && $i%5 == 0){ //$iが4でかつ5で割り切れるときはtic-tacと出力
+        echo'tic-tac' . "\n"; 
+    }
+
+    if($i%4 == 0){ //$iが4で割り切れるときはticと出力
+        echo 'tic' . "\n";
+    }
     
-if($count%5 == 0){
-    return 'tac';
+    if($i%5 == 0){ //$iが5で割り切れる時はtacと出力
+        echo 'tac' . "\n";
+    }else{ //上記のいずれでもない場合はカウンタの数字($i)をそのまま表示
+        echo $i . "\n";
+    }
 }
 
-} 
+?>
 
-echo tohundred('20');
 
-?> 
 
 // Q2 多次元連想配列
 
@@ -80,15 +80,13 @@ $personalInfos[0]['age'] = '25';
 foreach ($personalInfos as $ageList => $personalInfos['age']){
 
 var_dump($personalInfos);
+
 }
 ?>
 
 ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
 
 🔵問３ ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
-
-
-🔵問３
 
 <?php
 $personalInfos = [
@@ -155,7 +153,7 @@ class Student
     $mio = new Student('1523', '実央');
     $yamada = new Student('120', '山田');
     
-    echo $yamada = '学籍番号' . $yamada->studentId . '番の生徒は' . $yamada->studentName . 'です。';
+    echo '学籍番号' . $yamada->studentId . '番の生徒は' . $yamada->studentName . 'です。';
 
 ?>
 
@@ -210,3 +208,4 @@ $interval = $datetime1->diff($datetime2);
 
 echo $interval->format('あの日から' . '%a' . '日経過しました。');
 ?>
+
