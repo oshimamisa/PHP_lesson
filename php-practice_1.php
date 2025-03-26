@@ -118,6 +118,7 @@ $array = [
     
 foreach ($array as $key => $value) {//$key => $valueを定義してるas
     echo $value. "\n";
+    
 }
 ?>
 

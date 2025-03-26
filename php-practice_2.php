@@ -55,6 +55,38 @@ echo ($personalInfos[1]['name']) .'の電話番号は' . ($personalInfos[1]['tel
 
 🔵問２ ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
 <?php
+// Your code here!
+
+$personalInfos = [
+    [                 //[]が配列、今回は配列に配列が入っている状態
+        'name' => 'Aさん',
+        'mail' => 'aaa@mail.com',
+        'tel'  => '09011112222',
+        // 'age' => '25'
+    ],
+    [
+        'name' => 'Bさん',
+        'mail' => 'bbb@mail.com',
+        'tel'  => '08033334444'
+    ],
+    [
+        'name' => 'Cさん',
+        'mail' => 'ccc@mail.com',
+        'tel'  => '09055556666'
+    ],
+];
+
+
+
+
+foreach ($personalInfos as $number=>$person){
+    echo  $number+1 ."番目の" . $person['name'] . "さんのメールアドレスは" . $person['mail'] . "で、電話番号は" . $person['tel'] . "です。". "\n" ;
+
+// echo ($value) . "のメールアドレスは" . ($personalInfos[0]['mail'] ."で、電話番号は". ($personalInfos[0]['tel']) . "です。" );
+
+}
+
+/* <?php
 $personalInfos = [
     [
         'name' => 'Aさん',
@@ -83,6 +115,39 @@ var_dump($personalInfos);
 
 }
 ?>
+
+🟠ここから🟠<?php
+$personalInfos = [
+    [
+        'name' => 'Aさん',
+        'mail' => 'aaa@mail.com',
+        'tel'  => '09011112222',
+        // 'age' => '25'
+    ],
+    [
+        'name' => 'Bさん',
+        'mail' => 'bbb@mail.com',
+        'tel'  => '08033334444'
+    ],
+    [
+        'name' => 'Cさん',
+        'mail' => 'ccc@mail.com',
+        'tel'  => '09055556666'
+    ],
+];
+
+
+var_dump($personalInfos);
+
+
+
+foreach ($personalInfos as $personalInfos['name']['mail']['tel'] => $value){
+
+echo ($personalInfos[0]['name']) . "のメールアドレスは" . ($personalInfos[0]['mail'] ."で、電話番号は". ($personalInfos[0]['tel']) . "です。" );
+
+}
+?>
+ */
 
 ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
 
