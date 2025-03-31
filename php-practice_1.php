@@ -118,7 +118,7 @@ $array = [
     
 foreach ($array as $key => $value) {//$key => $valueを定義してるas
     echo $value. "\n";
-    
+
 }
 ?>
 
@@ -248,9 +248,9 @@ function distinguishNum($number)
 
 
 if($number % 2 == 0){
-    echo $number . 'は偶数です。';
+    echo $number . 'は偶数です。' . "\n";
 }else{
-    echo $number . 'は奇数です。';
+    echo $number . 'は奇数です。' . "\n";
 }
 
 $number = 11;
@@ -284,21 +284,21 @@ function evaluateGrade($grade)
 {
 switch ($grade){
 
-    case 'A';
-    case 'B';
-        echo '合格です。';
+    case 'A':
+    case 'B':
+        echo '合格です。' . "\n";
         break;
         
-    case 'C';
-        echo '合格ですが追加課題があります。';
+    case 'C':
+        echo '合格ですが追加課題があります。' . "\n";
         break;
         
-    case 'D';
-        echo '不合格です。';
+    case 'D':
+        echo '不合格です。' . "\n";
         break;
         
-    default;
-        echo '判定不明です。講師に問い合わせてください。';
+    default:
+        echo '判定不明です。講師に問い合わせてください。' . "\n";
         break;
 
 }
@@ -308,5 +308,3 @@ echo evaluateGrade('A');
 echo evaluateGrade('X');
 ?>
 
-
-?>
