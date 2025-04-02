@@ -7,19 +7,15 @@
 
 echo '1から100までのカウントを開始します' . "\n \n";
 
-for($i=0; $i<101; $i++){//カウンタの初期値は0、$iが101より小さい場合はずっと繰り返す、増減式処理1回ごとに1を加算していく
+for($i=0; $i<101; $i++) {//カウンタの初期値は0、$iが101より小さい場合はずっと繰り返す、増減式処理1回ごとに1を加算していく
 
-    if($i%4 == 0 && $i%5 == 0){ //$iが4でかつ5で割り切れるときはtic-tacと出力
+    if($i % 4 === 0 && $i % 5 === 0) { //$iが4でかつ5で割り切れるときはtic-tacと出力
         echo'tic-tac' . "\n"; 
-    }
-
-    elseif($i%4 == 0){ //$iが4で割り切れるときはticと出力
+    } elseif($i % 4 === 0) { //$iが4で割り切れるときはticと出力
         echo 'tic' . "\n";
-    }
-    
-    elseif($i%5 == 0){ //$iが5で割り切れる時はtacと出力
+    } elseif($i % 5 === 0) { //$iが5で割り切れる時はtacと出力
         echo 'tac' . "\n";
-    }else{ //上記のいずれでもない場合はカウンタの数字($i)をそのまま表示
+    } else { //上記のいずれでもない場合はカウンタの数字($i)をそのまま表示
         echo $i . "\n";
     }
 }
@@ -50,7 +46,7 @@ $personalInfos = [
     ],
 ];
 
-var_dump ($personalInfos[1]['name']);//$personalInfosのnameのデータ型と値を表示。
+//var_dump ($personalInfos[1]['name']);//$personalInfosのnameのデータ型と値を表示。
 echo ($personalInfos[1]['name']) .'の電話番号は' . ($personalInfos[1]['tel']) . 'です。' ;
 ?>
 
@@ -58,7 +54,6 @@ echo ($personalInfos[1]['name']) .'の電話番号は' . ($personalInfos[1]['tel
 
 🔵問２ ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
 <?php
-// Your code here!
 
 $personalInfos = [
     [                 //[]が配列、今回は配列に配列が入っている状態
@@ -75,19 +70,16 @@ $personalInfos = [
     [
         'name' => 'Cさん',
         'mail' => 'ccc@mail.com',
-        'tel'  => '09055556666'
+        'tel' => '09055556666'
     ],
 ];
 
-
-
-
 foreach ($personalInfos as $number=>$person){
-    echo  $number+1 ."番目の" . $person['name'] . "さんのメールアドレスは" . $person['mail'] . "で、電話番号は" . $person['tel'] . "です。". "\n" ;
+    echo $number+1 ."番目の" . $person['name'] . "さんのメールアドレスは" . $person['mail'] . "で、電話番号は" . $person['tel'] . "です。". "\n" ;
+}
+?>
 
 // echo ($value) . "のメールアドレスは" . ($personalInfos[0]['mail'] ."で、電話番号は". ($personalInfos[0]['tel']) . "です。" );
-
-}
 
 /* <?php
 $personalInfos = [
@@ -195,8 +187,6 @@ var_dump($personalInfos);
 
 
 // Q3 オブジェクト-1
-
-<?php
 
 <?php
 
