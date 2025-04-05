@@ -50,22 +50,12 @@ if($whichIsBigger[0] > [1]){
 1~10までの値を偶数の場合は「偶数」、奇数の場合は「奇数」と出力してください
 ⏰かかった時間 25分 奇数と偶数の定義がわからなかった
 
+
 <?php
 for($number = 1; $number < 11; $number++){
     if($number % 2 ===0){
         echo $number ."は偶数" . "\n";
     }else{
-        echo $number . "は奇数" . "\n";
-    }
-}
-?>
-
-
-<?php
-for($number = 1; $number < 11; $number++){
-    if($number % 2 ===0){
-        echo $number ."は偶数" . "\n";
-    }elseif($number % 2 === 1){
         echo $number . "は奇数" . "\n";
     }
 }
