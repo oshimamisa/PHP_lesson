@@ -92,15 +92,16 @@ function judge($name = '性別')
     }
 }
 
-✅出力結果確認✅
+//結果確認用
 echo judge('男');
 echo judge('ねこ');
+echo judge('女');
 
 ?>
 
 ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
 
-問3
+問3 🟡要確認 解説もらう
 
 class User
 {
@@ -115,6 +116,23 @@ var_dump($user->isAdult(17)); // false
 問題1 : 18歳以上の場合true、18歳未満の場合falseになるisAdultメソッドを定義してください。
 問題2 : 現在の isAdult() は、毎回 $age を引数で渡さなければなりません。
 User クラスが age をプロパティとして持つように修正し、引数なしで isAdult() を呼び出せるようにしてください。
+
+
+<?php
+class User
+{
+    public function isAdult($age)
+    {
+        return $age >= 18;
+    }
+}
+
+$user = new User();
+var_dump($user->isAdult(20)); // true
+var_dump($user->isAdult(17)); // false
+
+?>
+
 
 ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
 
