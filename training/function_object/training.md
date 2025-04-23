@@ -13,6 +13,19 @@
 800円の商品が今だけ640円です！
 ```
 
+### ---　✅解答
+<?php
+function CalcDiscountPrice($price){
+    return ($price * 0.8);
+}
+
+    $price = 800;
+    $FinalPrice = CalcDiscountPrice($price);
+    
+    echo $price . '円の商品が今だけ' . $FinalPrice . '円です！';
+    
+?>
+
 
 ## --- 関数Q2
 引数に渡した整数を3の倍数かどうか判定する関数を作成します。以下の条件のもと、渡した数字が偶数かどうか判定しましょう。
@@ -21,7 +34,27 @@
 - 整数を引数に受け取って、3の倍数だった場合にtrue、そうではなかった場合にfalseを返す関数を、isMultipleOfThreeという名前で定義してください。
 - 返り値をvar_dumpで出力しましょう。
 
+### ---✅回答
+<?php
 
+    function isMultipleOfThree($integer){
+        if($integer % 3 === 0){
+            return true;
+        }else{
+            return false;
+        }
+        
+    }
+        $integer = 3;
+        var_dump (isMultipleOfThree($integer));
+?>
+
+✅実行結果▶️
+$integer = 3の時
+bool(true)
+
+$integer = 23の時
+bool(false)
 
 # オブジェクト
 ## --- オブジェクトQ1-1
