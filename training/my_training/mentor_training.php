@@ -321,6 +321,181 @@ class Liver
 
 ⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️
 
+🌟 オブジェクトQ3 - 星導ショウ編
+にじさんじライバー「星導ショウ」くんの情報をオブジェクトで管理するクラスを作成してください！
+
+--- 条件
+クラス名は NijisanjiLiver としてください
+
+コンストラクタメソッドを作成してください
+
+引数 $name にライバー名を、$unit に所属ユニット名（例：MECHATU-A）、$catchphrase にキャッチフレーズを受け取り、それぞれプロパティに格納してください
+
+次のような文を出力してください：
+
+🧾 出力例
+css
+コピーする
+編集する
+ライバー名：星導ショウ
+所属ユニット：MECHATU-A
+キャッチフレーズ：運命を、導け。
+
+✅回答
+
+<?php
+class NijisanjiLiver
+{
+    public $name;
+    public $unit;
+    public $catchphrase;
+    
+    public function __construct($param1 , $param2 , $param3){
+        $this -> name = $param1;
+        $this -> unit = $param2;
+        $this -> catchphrase = $param3;
+    }
+}
+
+$sylvestar = new NijisanjiLiver('星導ショウ' , 'MECHATU-A' , '運命を、導け。');
+
+echo 'ライバー名:' . $sylvestar -> name . "\n" .
+    '所属ユニット:' . $sylvestar -> unit . "\n" .
+    'キャッチフレーズ:' . $sylvestar -> catchphrase;
+    
+?>
+
+⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️
+
+🎯 オブジェクトQ5 - ヒーローズのライバーを紹介
+にじさんじヒーローズのライバーたちをオブジェクトで管理して、以下の情報を出力するプログラムを作成してください。
+
+--- 条件
+クラス名は HeroLiver としてください。
+
+クラスのプロパティには以下の情報を格納するための変数を作成してください。
+
+$name → ライバー名
+
+$age → 年齢
+
+$specialAbility → 特技（または能力、必殺技など）
+
+コンストラクタメソッドで、引数からそれぞれ
+
+ライバー名
+
+年齢
+
+特技 を受け取り、プロパティにセットしてください。
+
+最後に、インスタンス化したオブジェクトを使って、以下のような形式でライバーを紹介するメッセージを出力してください。
+
+🧾 出力例（例：星導ショウくん）
+コードをコピーする
+ライバー名：星導ショウ
+年齢：22歳
+特技：スターエッジを使いこなす
+
+✅回答
+
+<?php
+class HeroLiver{
+    public $name;
+    public $age;
+    public $skill;
+    
+    public function __construct($param1 , $param2 , $param3){
+        $this -> name = $param1;
+        $this -> age = $param2;
+        $this -> skill = $param3;
+    }
+}
+
+$sylvestar = new HeroLiver('星導ショウ' , '140億歳' , '歌');
+
+echo 'ライバー名:' . $sylvestar -> name . "\n" .
+     '年齢:' . $sylvestar -> age . "\n" .
+     '特技:' . $sylvestar -> skill . "\n\n";
+     
+$mechanic = new HeroLiver('伊波ライ' , '21歳' , '歌');
+
+echo 'ライバー名:' . $mechanic -> name . "\n" .
+     '年齢:' . $mechanic -> age . "\n" .
+     '特技:' . $mechanic -> skill;
+
+?>
+
+
+⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️
+
+--- オブジェクトQ1-3（応用問題）
+条件
+ヒーローズのメンバーを表すクラス Hero を作成してください。
+
+クラスには以下のプロパティを持たせてください。
+
+name: ライバーの名前
+
+age: ライバーの年齢
+
+skill: ライバーの特技
+
+コンストラクタを使って、これらのプロパティに値をセットできるようにしてください。
+
+fetchDiscountedPrice というメソッドを作成し、そのメソッドで特技に応じて割引価格を返すようにしてください。特技が「歌」なら10%割引、「ダンス」なら5%割引、「その他」なら割引なし。
+
+価格は price というプロパティで、商品価格を設定できるようにしてください。割引後の価格を表示するようにしてください。
+
+出力例
+makefile
+コードをコピーする
+ライバー名: 星導ショウ
+年齢: 140億歳
+特技: 歌
+割引後の価格: 90円
+
+
+✅回答
+
+<?php
+class Hero{
+    public $name;
+    public $age;
+    public $skill;
+    public $price;
+    
+    public function __construct($param1 , $param2 , $param3 , $param4){
+        $this -> name = $param1;
+        $this -> age = $param2;
+        $this -> skill = $param3;
+        $this -> price = $param4;
+    }
+    
+    public function fetchDiscountedPrice(){
+        if($this -> skill === '歌'){
+            return $this -> price * 0.9;
+        }elseif($this -> skill === 'ダンス'){
+            return $this -> price * 0.95;
+        }
+    }
+}
+
+$sylvestar = new Hero('星導ショウ' , '140億歳' , '歌' , 1000);
+
+echo 'ライバー名:' . $sylvestar -> name . "\n" .
+     '年齢:' . $sylvestar -> age . "\n" .
+     '特技:' . $sylvestar -> skill . "\n" .
+     '割引後の価格:' . $sylvestar -> fetchDiscountedPrice() . "円\n\n";
+?>
+
+🟡修正ポイント(できなかったところ)
+エラーが出ている理由は、fetchDiscountedPrice メソッド内で $param3 を使おうとしていますが、$param3 はクラス内ではプロパティとして定義されているため、直接 $param3 と書くと「未定義の変数」としてエラーが出ます。
+
+そのため、クラス内では this-> を使ってプロパティにアクセスする必要があります。
+
+修正方法は、$param3 を this->skill に変更することです。
+
 
 
 

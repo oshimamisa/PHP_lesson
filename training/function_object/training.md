@@ -78,6 +78,25 @@ class Item
     public $price;
 }
 ```
+✅回答
+
+<?php
+
+class Item
+{
+    public $name;
+    public $price;
+    
+    public function __construct($param1 , $param2){
+        $this -> name = $param1;
+        $this -> price = $param2;
+    }
+}
+    $apple = new Item('りんご' , 100);
+    
+    echo $apple -> name . 'の税抜価格は' . $apple -> price . '円です。';
+?>
+
 
 ## --- オブジェクトQ1-2
 Q1で使用した商品クラスを同じく使用して、条件を満たした上で下記の文字列を出力してください。
@@ -90,6 +109,45 @@ Q1で使用した商品クラスを同じく使用して、条件を満たした
 ```
 みかんの税込価格は220円です。
 ```
+
+✅回答
+
+<?php
+
+class Item
+{
+    public $name;
+    public $price;
+    
+    public function __construct($param1 , $param2){
+        $this -> name = $param1;
+        $this -> price = $param2;
+    }
+        
+    public function fetchCalcTaxInPrice(){
+        return $this -> price * 1.1;
+    }
+    
+}
+
+    $apple = new Item('りんご' , 100);
+    
+    echo $apple -> name . 'の税抜価格は' . $apple -> price . "円です。\n\n";
+    
+    $orange = new Item('みかん' , 200);
+
+    
+    echo $orange -> name . 'の税込価格は' . $orange -> fetchCalcTaxInPrice() . "円です。\n\n";
+    
+?>
+
+🟡修正ポイント
+fetchCalcTaxInPrice() メソッドの閉じかっこが足りていなかったから、しっかり閉じてあげること。
+
+fetchCalcTaxInPrice の呼び出し方: メソッドを呼び出すときは、() を忘れずに付けよう！
+→ $orange->fetchCalcTaxInPrice() と書かないといけないよ。
+
+
 
 ## --- オブジェクトQ2-1
 ショッピングカートを表す Cart クラスを作成し、商品の追加、合計金額の計算をできるようにしてください。
