@@ -597,6 +597,60 @@ class Game {
 
 ⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️
 
+✅php基礎　オブジェクト練習問題✅
+
+<?php
+
+function calculateDiscount($total) {
+    if ($total >= 5000) {
+        return (int) ($total * 0.9);
+    }else{
+        return $total;
+    }
+}
+
+    echo calculateDiscount();
+
+?>
+
+この関数の仕様は以下になります。
+	•	購入金額 $total が 5000円以上なら10%割引する
+	•	5000円未満なら割引なし（そのままの金額を返す）
+ただし、バグがあり「5000円以上でも割引が適用されない」ことがある ため、修正してください。
+
+
+✅Q2✅
+
+<?php
+
+class Pokemon {
+  public $name;
+  public $element;
+  
+  public function __construct($name , $element){
+      $this->name = $name;
+      $this->element = $element;
+  }
+
+  public function attack($skill) {
+    echo 'いけ、' . $this->element . 'ポケモン' . $this->name . '！！' . $skill . 'だ！！';
+  } 
+}
+
+    $firstpokemon = new Pokemon('ピカチュウ' , '雷');
+    $firstpokemon->attack('aaaaaa');
+
+?>
+
+
+上記を追記して「いけ、雷ポケモンピカチュウ！！10万ボルトだ！！」
+$name をポケモンの名前
+$element をポケモンの属性
+$skillは技名
+上記を利用して引数は変えずに実装してください。
+
+⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️
+
 
 
 
