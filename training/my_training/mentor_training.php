@@ -530,6 +530,74 @@ text
 
 
 
+レビュー問題オブジェクト⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️
+
+
+<?php
+
+class Game {
+  public function describe($name, $hard) {
+  
+  }
+}
+Q1.
+上記コードを使用し、「鳴潮はPS5のゲームです」をdescribeメソッドを使用して出力してください。（引数は変更しないでください。）
+
+✅回答✅
+<?php
+
+class Game {
+    public $name;
+    public $hard;
+    
+    public function describe($name, $hard) {
+        echo $name . 'は' . $hard . 'のゲームです';
+  }
+}
+    $meityo = new Game('鳴潮' , 'PS5');
+    $meityo->describe('鳴潮' , 'PS5');
+?>
+
+
+Q2
+上記コードを使用し、「鳴潮はPS5のゲームです」をdescribeメソッドを使用して出力してください。（引数は変更しないでください。）
+
+<?php
+
+class Game {
+  public $name  
+  public $hard
+
+  public function describe() {
+  
+  }    
+}  
+
+✅回答✅
+
+<?php
+
+class Game {
+  public $name;
+  public $hard;
+  
+  public function __construct($name , $hard){
+      $this->name = $name;
+      $this->hard = $hard;
+  }
+
+  public function describe() {
+      echo $this->name . 'は' . $this->hard . 'のゲームです';
+  
+  }
+}
+    $meityo = new Game('鳴潮' , 'PS5');
+    $meityo->describe();
+?>
+
+⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️⚪️
+
+
 
 
 
